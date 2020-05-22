@@ -14,18 +14,14 @@
     <title><%= pageTitle %></title>
 </head>
 
-<body>
-    <% if (NameMail > 0 ) {&>
-        <div>
-            <% for (let name of NameMail) { %>
-    <form class="form_class">
-        <div class="form-label">
-            <h5 id="fullname" class="fullname_post"><%= name.fullname %></h5>  
-        </div>
-    </form>
-    <%= } %>
-    </div>
-<%= } %>
+<body style="background-color:white">
+<p>Admin Page</p>
+    <ul >
+    <% data.forEach(function(data) { %>
+        <li><%= data.fullname %> - <%= data.mail %></li>
+    <% }); %>
+</ul>
+ 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
